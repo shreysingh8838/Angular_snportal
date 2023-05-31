@@ -32,6 +32,13 @@ nav a {
     font-size: 18px;
 }
 
+nav a:hover {
+    color: #f9f9f9;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
 /*  */
 .container-wrapper {
     display: flex;
