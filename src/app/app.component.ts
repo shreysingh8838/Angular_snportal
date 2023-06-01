@@ -19,28 +19,6 @@ import { HomeService } from '../app/home.service';
             <router-outlet></router-outlet>`,
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit  {
+export class AppComponent {
   title = 'sarkariresult';
-
-  jobs: string[] = [];
-  homeData: any[] = [];
-  resultSet: any[] = [];
-  admitCardSet: any[] = [];
-  latestJobSet: any[] = [];
-  answerKeySet: any[] = [];
-  admissionSet: any[] = [];
-
-  constructor(private homeService: HomeService){  }
-
-  ngOnInit() {
-    this.homeService.getHomeDataList().subscribe((homeData: any[]) => {
-      console.log(homeData);
-      this.homeData = homeData;
-      this.resultSet = homeData[0];
-      this.admitCardSet = homeData[1];
-      this.latestJobSet = homeData[2];
-      this.answerKeySet = homeData[3];
-      this.admissionSet = homeData[4];
-    });
-  }
 }
