@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class HomeService {
+export class CallHomeDataService {
   private homeApi = 'http://localhost:8080/home';
 
   constructor(private http: HttpClient) { }

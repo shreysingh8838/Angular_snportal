@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from '../home.service';
+import { CallHomeDataService } from '../call-home-data.service';
 
 @Component({
   selector: 'app-home',
@@ -41,10 +41,10 @@ export class HomeComponent implements OnInit {
   answerKeySet: any[] = [];
   admissionSet: any[] = [];
 
-  constructor(private homeService: HomeService) { }
+  constructor(private callHomeDataService: CallHomeDataService) { }
 
   ngOnInit() {
-    this.homeService.getHomeDataList().subscribe((homeData: any[]) => {
+    this.callHomeDataService.getHomeDataList().subscribe((homeData: any[]) => {
       console.log(homeData);
       this.resultSet = homeData[0];
       this.admitCardSet = homeData[1];
