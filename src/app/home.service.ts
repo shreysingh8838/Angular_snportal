@@ -6,10 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HomeService {
-  private apiUrl = 'http://localhost:8080/home';
+  private homeApi = 'http://localhost:8080/home';
+
   constructor(private http: HttpClient) { }
 
   getHomeDataList(): Observable<any> {
-    return this.http.get(this.apiUrl);
+    return this.http.get(this.homeApi);
     }
 }

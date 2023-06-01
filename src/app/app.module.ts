@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SinglelistComponent } from './singlelist/singlelist.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SinglelistComponent
+    SinglelistComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,7 @@ import { SinglelistComponent } from './singlelist/singlelist.component';
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
       { path: 'singlelist', component: SinglelistComponent },
+      { path: 'product', component: ProductComponent},
     ])
   ],
   providers: [],
