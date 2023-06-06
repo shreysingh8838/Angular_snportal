@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CallSingleListService } from '../call-single-list.service';
 
 import { RouterLink, ActivatedRoute, Router } from '@angular/router';
+import { CallProductDataService } from '../call-product-data.service';
 
 @Component({
   selector: 'app-singlelist',
@@ -11,7 +12,7 @@ import { RouterLink, ActivatedRoute, Router } from '@angular/router';
     <div class="container-row">
       <h2 class="job-title">{{title}}</h2> <br>
       <div class="link-list" id="jobs">
-        <a *ngFor="let set of requiredSet" routerLink="/product" [queryParams]="{link: set.link }">{{ set.title }}</a>
+        <a *ngFor="let set of requiredSet" onclick="HitClick(set.link)" routerLink="/product" [queryParams]="{link: set.link }">{{ set.title }}</a>
       </div>
     </div>
   </div>
@@ -23,9 +24,15 @@ export class SinglelistComponent implements OnInit {
   flag: string = '';
   dataSize: number | undefined ;
   requiredSet: any[] = [];
+  link: string = '';
+  constructor(private route: ActivatedRoute,private callSingleListService: CallSingleListService, private callProductData : CallProductDataService) { }
 
-  constructor(private route: ActivatedRoute,private callSingleListService: CallSingleListService) { }
-
+  // HitClick(link : string){
+  //   this.link = link;
+  //   this.callProductData.sendLink(this.link);
+  //   console.log("method hit");
+  // }
+  
   ngOnInit() {
     this.flag = this.route.snapshot.queryParams['set'];
     console.log(this.flag);
