@@ -1,4 +1,26 @@
 /*  */
+.emblemimg{
+    height: 150px;
+    width: auto;
+}
+.view-more-button {
+    background-color: #4CAF50;
+    height: 40px;
+    width: 240px;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.view-more-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Add a slight scale effect on hover */
+}
+
 .container-wrapper {
     display: flex;
     justify-content: center;
@@ -6,6 +28,13 @@
     flex-wrap: wrap;
     gap: 10px;
     padding: 20px;
+}
+
+.container-img {
+    width: 240px;
+    display: flex;
+    justify-content: center;
+
 }
 
 .container-row {
@@ -51,9 +80,8 @@ h1 {
 
 .link-list a:hover {
     display: block;
-    padding-bottom: 3px;
-    margin-bottom: 9px;
     color: darkgreen;
+    transform: scale(1.05); /* Add a slight scale effect on hover */
     text-decoration: none;
 }
 

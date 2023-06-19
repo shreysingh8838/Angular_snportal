@@ -27,11 +27,11 @@ export class SinglelistComponent implements OnInit {
   link: string = '';
   constructor(private route: ActivatedRoute,private callSingleListService: CallSingleListService, private callProductData : CallProductDataService) { }
 
-  // HitClick(link : string){
-  //   this.link = link;
-  //   this.callProductData.sendLink(this.link);
-  //   console.log("method hit");
-  // }
+  HitClick(link : string){
+    this.link = link;
+    this.callProductData.sendLink(this.link);
+    console.log("method hit");
+  }
   
   ngOnInit() {
     this.flag = this.route.snapshot.queryParams['set'];

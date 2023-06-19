@@ -23,6 +23,7 @@ import { ProductComponent } from './product/product.component';
       { path: 'home', component: HomeComponent },
       { path: 'singlelist', component: SinglelistComponent },
       { path: 'product', component: ProductComponent},
+      {path : '', redirectTo: 'home', pathMatch: 'full'},
     ])
   ],
   providers: [],

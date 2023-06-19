@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,11 @@ export class CallProductDataService {
 
   constructor(private httpClient : HttpClient) { }
 
-  sendLink(link: string): Observable<Object> {
+  sendLink(link: string): Observable<string> {
     const requestBody = { "link" : link };
     console.log("Data sent to Backend")
     console.log(requestBody);
-    return this.httpClient.post(this.sendLinkurl, requestBody);
+    return this.httpClient.post<string>(this.sendLinkurl, requestBody);
   }
   
   // getHomeDataList(): Observable<any> {

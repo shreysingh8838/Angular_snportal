@@ -10,22 +10,20 @@ import { CallProductDataService } from '../call-product-data.service';
 export class ProductComponent implements OnInit{
   constructor(private route : ActivatedRoute, private callProductData : CallProductDataService){}
 
+  homedata : any;
+
   private HitClick(link : string){
     this.callProductData.sendLink(link).subscribe(data => {
+      console.log(data);
       console.log("Product data service hit");
+      // this.getHomeData();
     },
     error => console.log(error));
   }
 
-  homedata : any;
   ngOnInit(): void {
     const link :string = this.route.snapshot.queryParams['link'];
     console.log("prod component hit");
     this.HitClick(link);
-
-    // this.callProductData.getHomeDataList().subscribe((homeData: any[]) => {
-    //   this.homedata = homeData[0];
-    //   console.log(this.homedata);
-    // });
   }
 }
