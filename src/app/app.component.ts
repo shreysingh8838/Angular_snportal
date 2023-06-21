@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   template: `
                 <header>
+                  <img src="./assets/My project.png" class="mainimg">
                   <h1 class="header-text">Sarkari Naukri Portal</h1>
                 </header>
                 <nav>
