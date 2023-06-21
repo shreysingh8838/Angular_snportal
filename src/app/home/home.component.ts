@@ -4,6 +4,19 @@ import { CallHomeDataService } from '../call-home-data.service';
 @Component({
   selector: 'app-home',
   template: `
+  
+  <div *ngIf="isLoading; else dataContent" class="loading-container">
+    <div class="container-wrapper">
+      <h2>Loading</h2>
+    </div>
+      <div class="container-wrapper">
+        <img          
+          src="https://i0.wp.com/zeevector.com/wp-content/uploads/LOGO/Government-of-India-Logo-Vector-PNG.png?fit=660%2C1113&ssl=1"
+          class="loadingemblemimg"
+        />
+      </div>
+  </div>
+  <ng-template #dataContent>
     <div class="container-wrapper">
       <div class="container-img">
         <img
@@ -12,7 +25,6 @@ import { CallHomeDataService } from '../call-home-data.service';
         />
       </div>
       </div>
-
       <div class="container-wrapper">
         <div class="container-row">
           <h2 class="job-title">Result</h2>
@@ -63,10 +75,15 @@ import { CallHomeDataService } from '../call-home-data.service';
           </div>
         </div>
       </div>
+    </ng-template>
+
   `,
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+
+  isLoading: boolean = true; // Flag to track loading state
+
   jobs: string[] = [];
   resultSet: any[] = [];
   admitCardSet: any[] = [];
@@ -84,6 +101,7 @@ export class HomeComponent implements OnInit {
       this.latestJobSet = homeData[2];
       this.answerKeySet = homeData[3];
       this.admissionSet = homeData[4];
+      this.isLoading = false;
     });
   }
 }
