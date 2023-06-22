@@ -69,6 +69,7 @@ h1 {
     padding: 3px;
     margin-bottom: 5px;
     color: darkgreen;
+    transform: scale(1.05); /* Add a slight scale effect on hover */
     text-decoration: none;
     border: 1px solid darkgreen; /* Change border color on hover */
 }

@@ -4,8 +4,13 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   template: `
                 <header>
-                  <img src="./assets/My project.png" class="mainimg">
-                  <h1 class="header-text">Sarkari Naukri Portal</h1>
+                  <div class="header-img">
+                    <img src="./assets/india_640 (1).png" class="header-mainimg">
+                  </div>
+                  <div class="header-text">
+                    <h1 class="header-hindi-text">सरकारी नौकरी पोर्टल</h1>
+                    <h1 class="header-english-text">Sarkari Naukri Portal</h1>
+                  </div>
                 </header>
                 <nav>
                   <a routerLink="home">Home</a>

@@ -1,19 +1,28 @@
 .header-text{
-    padding-top: 24px;
-    padding-bottom: 0px;
+    padding-top: 20px;
+    /* color: rgb(159, 230, 240); */
+    color: #111;
 }
 
-.mainimg{
+.header-hindi-text{
+    font-size: 19px;
+}
+
+.header-english-text{
+    margin-top: -15px;
+    font-size: 35px;
+}
+
+.header-mainimg{
+    margin-bottom: 10px;
     height: 100px;
     width: auto;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;  
+    background-color: white;
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -21,23 +30,22 @@ header {
 }
 
 nav {
-    background-color: #666;
+    margin-top: -15px;
+    background-color: #F6F3EE;
     padding: 15px;
     text-align: center;
 }
 
 nav a {
-    color: #fff;
+    color: #111;
     text-decoration: none;
-    margin-right: 20px;
+    padding-right: 20px;
     font-size: 18px;
 }
 
 nav a:hover {
-    color: #f9f9f9;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 18px;
+    color: #666;
+    transform: scale(1.05); /* Add a slight scale effect on hover */
 }
 
 /*  */

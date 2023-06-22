@@ -7,7 +7,7 @@ import { CallHomeDataService } from '../call-home-data.service';
   
   <div *ngIf="isLoading; else dataContent" class="loading-container">
     <div class="container-wrapper">
-      <h2>Loading</h2>
+      <h1 class="loading-text">Loading</h1>
     </div>
       <div class="container-wrapper">
         <img          
@@ -17,14 +17,17 @@ import { CallHomeDataService } from '../call-home-data.service';
       </div>
   </div>
   <ng-template #dataContent>
-    <div class="container-wrapper">
+    <div>
+      <img class="banner-img" src="../assets/g20-banner_1.png" alt="">
+    </div>
+    <!-- <div class="container-wrapper">
       <div class="container-img">
         <img
           src="https://i0.wp.com/zeevector.com/wp-content/uploads/LOGO/Government-of-India-Logo-Vector-PNG.png?fit=660%2C1113&ssl=1"
           class="emblemimg"
         />
       </div>
-      </div>
+      </div> -->
       <div class="container-wrapper">
         <div class="container-row">
           <h2 class="job-title">Result</h2>
@@ -76,7 +79,6 @@ import { CallHomeDataService } from '../call-home-data.service';
         </div>
       </div>
     </ng-template>
-
   `,
   styleUrls: ['./home.component.css'],
 })

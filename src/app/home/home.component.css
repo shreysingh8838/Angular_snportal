@@ -4,13 +4,25 @@
     width: auto;
 }
 
+.loading-text{
+    height: max-content;
+    padding-top: 2vh;
+}
+
 .loadingemblemimg{
-    height: 150px;
+    height: 200px;
     width: auto;
 }
 
+.banner-img{
+    width: 100%;
+    height: 50vh;
+    padding: 2vh;
+    background-color: #fff;
+}
+
 .view-more-button {
-    background-color: #4CAF50;
+    background-color: #ef5b22;
     height: 40px;
     width: 240px;
     color: #fff;
@@ -23,9 +35,10 @@
   }
   
 .view-more-button:hover {
-  background-color: #45a049;
+  background-color: #ef5b22;
   transform: scale(1.05); /* Add a slight scale effect on hover */
 }
+
 
 .container-wrapper {
     display: flex;
@@ -34,19 +47,19 @@
     flex-wrap: wrap;
     gap: 10px;
     padding: 20px;
+    background-color: white;
 }
 
 .container-img {
     width: 240px;
     display: flex;
     justify-content: center;
-
 }
 
 .container-row {
     width: 240px;
     border: 0.5px solid #000;
-    background-color: #f9f9f9;
+    background-color: #F1F1F1;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -56,7 +69,6 @@
     max-width: 1020px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -80,16 +92,41 @@ h1 {
     display: block;
     padding-bottom: 3px;
     margin-bottom: 10px;
-    color: #4CAF50;
+    /* color: #35A1D1; */
+    color: #333;
     text-decoration: none;
 }
 
 .link-list a:hover {
     display: block;
-    color: darkgreen;
+    color: #999;
+    text-decoration: underline;
     transform: scale(1.05); /* Add a slight scale effect on hover */
-    text-decoration: none;
 }
+
+/* Media query for small devices */
+@media (max-width: 767px) {
+    .banner-image {
+      max-width: 100%; /* Set the maximum width to 100% for small devices */
+      max-height: 100%;
+    }
+  }
+  
+  /* Media query for medium devices */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .banner-image {
+      max-width: 80%; /* Set the maximum width to 80% for medium devices */
+      max-height: 80%;
+    }
+  }
+  
+  /* Media query for large devices */
+  @media (min-width: 992px) {
+    .banner-image {
+      max-width: 60%; /* Set the maximum width to 60% for large devices */
+      max-height: 60%;
+    }
+  }
 
 .cloud {
     width: 100px;
