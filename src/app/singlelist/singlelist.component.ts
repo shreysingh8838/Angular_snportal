@@ -8,24 +8,31 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'app-singlelist',
   template: `
+<!-- Loading Page -->
     <div *ngIf="isLoading; else dataContent" class="loading-container">
       <div class="container-wrapper">
-        <h2>Loading</h2>
+        <h1 class="loading-text">Loading</h1>
       </div>
-        <div class="container-wrapper">
-          <img          
-            src="https://i0.wp.com/zeevector.com/wp-content/uploads/LOGO/Government-of-India-Logo-Vector-PNG.png?fit=660%2C1113&ssl=1"
-            class="loadingemblemimg"
-          />
-        </div>
+      <div class="container-wrapper">
+        <img          
+          src="https://i0.wp.com/zeevector.com/wp-content/uploads/LOGO/Government-of-India-Logo-Vector-PNG.png?fit=660%2C1113&ssl=1"
+          class="loadingemblemimg"
+        />
+      </div>
       <!-- Add your loading UI here -->
     </div>
+
+<!-- When the data is loaded then show this template -->
     <ng-template #dataContent>
       <div class="container-wrapper">
+<!-- Emblem Image -->
         <img
           src="https://i0.wp.com/zeevector.com/wp-content/uploads/LOGO/Government-of-India-Logo-Vector-PNG.png?fit=660%2C1113&ssl=1"
           class="emblemimg"
         />
+        
+<!-- Add Pagination over here -->
+<!-- List of Links -->
         <div class="container-row">
           <h2 class="job-title">{{ title }}</h2> <br>
           <div class="link-list" id="jobs">

@@ -1,0 +1,118 @@
+li{
+    list-style-type: none
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container Wrapper */
+  .container-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .container-row{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #f7f7f7;
+  }
+  
+  .button-wrapper{
+    display: flex;
+    justify-content: right ;
+    padding-top: 2svh;
+    width: 90%;
+  }
+
+  /* Button Styles */
+.button-wrapper button {
+    background-color: #ef5b22;
+    color: #fff;
+    border: none;
+    padding: 10px ;
+    margin-right: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+  .button-wrapper button:hover {
+    background-color: #d4481d;
+    transform: scale(1.05);
+  }
+
+  /* Marquee */
+  marquee {
+    margin-bottom: 20px;
+  }
+  
+  /* Heading Content */
+  .heading-list {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  /* Age Limit */
+  .age-limit {
+    margin-bottom: 20px;
+  }
+  
+  /* Fees List */
+  .fees-list {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  /* Dates List */
+  .dates-list {
+    list-style-type: circle;
+    padding-left: 20px;
+  }
+  
+  /* How to Fill */
+  .how-to-fill {
+    margin-top: 20px;
+  }
+  
+  /* Downloads List */
+  .downloads-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .downloads-list li {
+    margin-bottom: 10px;
+  }
+  
+  /* Primary Button */
+  .btn-primary {
+    background-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0062cc;
+  }
+  
+  /* Secondary Button */
+  .btn-secondary {
+    background-color: #6c757d;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  

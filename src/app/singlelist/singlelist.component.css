@@ -1,3 +1,17 @@
+.loading-text{
+    height: max-content;
+    padding-top: 2vh;
+}
+
+.loadingemblemimg{
+    height: 200px;
+    width: auto;
+}
+
+.emblemimg {
+    width: 240px;
+}
+
 .container-wrapper {
     display: flex;
     justify-content: center;
@@ -5,15 +19,7 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-}
-
-.emblemimg {
-    width: 240px;
-}
-
-.loadingemblemimg{
-    height: 150px;
-    width: auto;
+    background-color: white;
 }
 
 .container-row {
@@ -27,20 +33,6 @@
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-}
-
-.container {
-    max-width: 1020px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-h1 {
-    margin-top: 0;
 }
 
 .job-title {
@@ -58,81 +50,18 @@ h1 {
     padding: 3px;
     height: 35px;
     margin-bottom: 10px;
-    color: #4CAF50;
+    color: #35A1D1;
     text-decoration: none;
-    border: 1px solid #4CAF50; /* Add border */
-    border-radius: 4px; /* Add border radius */
+    border: 1px solid #333;
+    border-radius: 4px; 
 }
 
 .link-list a:hover {
     display: block;
     padding: 3px;
     margin-bottom: 5px;
-    color: darkgreen;
-    transform: scale(1.05); /* Add a slight scale effect on hover */
-    text-decoration: none;
-    border: 1px solid darkgreen; /* Change border color on hover */
-}
-
-.cloud {
-    width: 100px;
-    border-color: black;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 15px;
-    text-align: center;
-}
-
-.dot {
-    width: 15px;
-    height: 15px;
-    margin-top: 3px;
-    border-radius: 50%;
-    background-color: red;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.text {
-    text-align: center;
-    font-weight: bold;
-    margin-left: 10px;
-    font-size: 20px;
-}
-
-.search-form {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.search-input {
-    flex-grow: 1;
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-}
-
-.search-button {
-    background-color: #4CAF50;
-    color: #fff;
+    color: #333;
+    transform: scale(1.05); 
+    text-decoration: underline;
     border: none;
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-button:hover {
-    background-color: #45a049;
 }

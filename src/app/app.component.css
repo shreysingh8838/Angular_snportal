@@ -1,5 +1,5 @@
 .header-text{
-    padding-top: 20px;
+    padding-top: 10px;
     /* color: rgb(159, 230, 240); */
     color: #111;
 }
@@ -10,7 +10,8 @@
 
 .header-english-text{
     margin-top: -15px;
-    font-size: 35px;
+    font-size: 40px;
+    font-weight: 800;
 }
 
 .header-mainimg{
@@ -32,139 +33,19 @@ header {
 nav {
     margin-top: -15px;
     background-color: #F6F3EE;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
 }
 
 nav a {
     color: #111;
     text-decoration: none;
-    padding-right: 20px;
-    font-size: 18px;
+    padding-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 nav a:hover {
     color: #666;
     transform: scale(1.05); /* Add a slight scale effect on hover */
-}
-
-/*  */
-.container-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-}
-
-.container-row {
-    width: 420px;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.container {
-    max-width: 1020px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-h1 {
-    margin-top: 0;
-}
-
-.job-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.link-list {
-    margin-top: 10px;
-}
-
-.link-list a {
-    display: block;
-    padding-bottom: 3px;
-    margin-bottom: 5px;
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.link-list a:hover {
-    display: block;
-    padding-bottom: 3px;
-    margin-bottom: 5px;
-    color: darkgreen;
-    text-decoration: none;
-}
-
-.cloud {
-    width: 100px;
-    border-color: black;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 15px;
-    text-align: center;
-}
-
-.dot {
-    width: 15px;
-    height: 15px;
-    margin-top: 3px;
-    border-radius: 50%;
-    background-color: red;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.text {
-    text-align: center;
-    font-weight: bold;
-    margin-left: 10px;
-    font-size: 20px;
-}
-
-.search-form {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.search-input {
-    flex-grow: 1;
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-}
-
-.search-button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-button:hover {
-    background-color: #45a049;
 }
