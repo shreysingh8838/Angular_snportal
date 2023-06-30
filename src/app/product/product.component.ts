@@ -10,29 +10,35 @@ import { CallProductDataService } from '../call-product-data.service';
   </form> -->
 
 <!-- total vacancy -> string -->
-<marquee behavior="alternate" direction="">
+<!-- <marquee behavior="alternate" direction="">
   <p>{{ totalVacancy }}</p>
-</marquee>
+</marquee> -->
 
 <div class="container-wrapper">
   <div class="container-row">
-  <div class="button-wrapper">
-      <!-- Official Website -->
-      <a href="{{ officialWebsite }}">
-        <button class="btn-primary">Official Website</button>
-      </a>
 
-      <!-- Apply Online -->
-      <a href="{{ applyOnlineLink }}">
-        <button class="btn-primary">Apply</button>
-      </a>
-    </div>
     <!-- Heading Content -->
     <div class="heading-list">
-      <ul class="">
-        <li *ngFor="let headingcontent of headingContent">{{ headingcontent }}</li>
-      </ul>
+        <h2> <strong>{{ headingContent[0] }} </strong></h2>
+        <h4>{{ headingContent[1] }}</h4>
+        <h4>{{ headingContent[2] }}</h4>
     </div>
+
+    <div class="button-wrapper">
+        <!-- Official Website -->
+        <a href="{{ officialWebsite }}">
+          <button class="btn-primary">Official Website</button>
+        </a>
+
+        <!-- Apply Online -->
+        <a href="{{ applyOnlineLink }}">
+          <button class="btn-primary">Apply Online</button>
+        </a>
+    </div>
+  </div>
+  <div class="container-row">
+    
+    
 
     
     

@@ -33,24 +33,25 @@ body {
   .button-wrapper{
     display: flex;
     justify-content: right ;
-    padding-top: 2svh;
-    width: 90%;
+    padding-bottom: 2svh;
+    width: 80%;
   }
 
   /* Button Styles */
-.button-wrapper button {
+  button {
     background-color: #ef5b22;
     color: #fff;
-    border: none;
+    border: solid ;
     padding: 10px ;
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
     transition: background-color 0.3s ease;
-}
+  }
   
-  .button-wrapper button:hover {
+  button:hover {
     background-color: #d4481d;
     transform: scale(1.05);
   }
@@ -62,8 +63,12 @@ body {
   
   /* Heading Content */
   .heading-list {
-    list-style-type: disc;
+    text-align: center;
     padding-left: 20px;
+  }
+
+  .heading-list h1{
+    font-size: 40px;
   }
   
   /* Age Limit */
@@ -99,7 +104,7 @@ body {
   }
   
   /* Primary Button */
-  .btn-primary {
+  /* .btn-primary {
     background-color: #007bff;
   }
   
@@ -108,6 +113,7 @@ body {
   }
   
   /* Secondary Button */
+  /*
   .btn-secondary {
     background-color: #6c757d;
   }
@@ -115,4 +121,4 @@ body {
   .btn-secondary:hover {
     background-color: #5a6268;
   }
-  
+   */
