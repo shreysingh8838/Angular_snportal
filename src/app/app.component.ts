@@ -20,9 +20,19 @@ import { Component, OnInit } from '@angular/core';
                   <a routerLink="singlelist" [queryParams]="{set: 'answerkey'}">Answer Keys</a>
                   <a routerLink="singlelist" [queryParams]="{set: 'admission'}">Admission Forms</a>
                   <a routerLink="singlelist" [queryParams]="{set: 'syllabus'}">Syllabus</a>
-                  <a routerLink="singlelist" [queryParams]="{set: 'syllabus'}">Contact Us</a>
+                  <a routerLink="contact" >Contact Us</a>
                 </nav>
                 <router-outlet></router-outlet>
+                <footer>
+                  <p>&copy; 2023 SarkariNaukriPortal. All rights reserved.</p>
+                  <p>For advertising in this website contact us sarkarinaukriportal@gmail.com</p>
+
+                  <div class="disclaimer">
+                    <p class="">
+                      Disclaimer : The Examination Results / Marks published in this Website is only for the immediate Information to the Examinees an does not to be a constitute to be a Legal Document. While all efforts have been made to make the Information available on this Website as Authentic as possible. We are not responsible for any Inadvertent Error that may have crept in the Examination Results / Marks being published in this Website nad for any loss to anybody or anything caused by any Shortcoming, Defect or Inaccuracy of the Information on this Website.
+                    </p>
+                  </div>
+                </footer>
             `,
   styleUrls: ['./app.component.css']
 })

@@ -49,3 +49,19 @@ nav a:hover {
     color: #666;
     transform: scale(1.05); /* Add a slight scale effect on hover */
 }
+
+/* Add this style for the footer */
+footer {
+    background-color: #F6F3EE;
+    text-align: center;
+    padding: 10px;
+    color: #111;
+    font-size: 14px;
+  }
+
+.disclaimer{
+    color: red;
+    font-size: 10px;
+    text-align: center;
+}
+  

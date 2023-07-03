@@ -1,39 +1,73 @@
-li{
-    list-style-type: none
-}
-
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+  .loading-text{
+    height: max-content;
+    padding-top: 2vh;
   }
+
+  .loadingemblemimg{
+    height: 200px;
+    width: auto;
+  }
+
+  li{
+      list-style-type: none
+  }
+
+  .howtofillLi{
+    list-style-type: upper-roman;
+  }
+
+  /* Global Styles */
+  body {
+      font-family: Arial, sans-serif;
+    }
   
   /* Container Wrapper */
   .container-wrapper {
-    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
-    background-color: #fff;
+    background-color: white;
   }
 
   .container-row{
-    width: 70%;
+    width: 60%;
+    background-color: #F1F1F1;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .row-wrapper {
+    width: 60%;
+    background-color: #F1F1F1;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: #f7f7f7;
   }
-  
+
+  .row {
+    width: 90%;
+    /* border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  }
+
+  .row h4{
+    padding-left: 6vh;
+  }
+
   .button-wrapper{
     display: flex;
     justify-content: right ;
-    padding-bottom: 2svh;
+    padding-top: 35px;
+    padding-right: 20px;
     width: 80%;
   }
 
@@ -63,34 +97,13 @@ body {
   
   /* Heading Content */
   .heading-list {
+    width: 100%;
     text-align: center;
     padding-left: 20px;
   }
 
   .heading-list h1{
     font-size: 40px;
-  }
-  
-  /* Age Limit */
-  .age-limit {
-    margin-bottom: 20px;
-  }
-  
-  /* Fees List */
-  .fees-list {
-    list-style-type: square;
-    padding-left: 20px;
-  }
-  
-  /* Dates List */
-  .dates-list {
-    list-style-type: circle;
-    padding-left: 20px;
-  }
-  
-  /* How to Fill */
-  .how-to-fill {
-    margin-top: 20px;
   }
   
   /* Downloads List */
@@ -122,3 +135,17 @@ body {
     background-color: #5a6268;
   }
    */
+
+   
+
+
+
+/* .job-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.link-list {
+  margin-top: 10px;
+} */

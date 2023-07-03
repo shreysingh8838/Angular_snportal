@@ -93,7 +93,10 @@ import { CallHomeDataService } from '../call-home-data.service';
 <!-- NON MASTER DETAILS LAYOUT -->  
       <div class="container-wrapper">
         <marquee behavior="alternate" direction=""><h2>Welcome to India's No. 1 Portal for Sarkari Naukri</h2></marquee>
+        
         <div class="box1">
+
+          <!-- Latest job -->
           <div class="container-row">
             <div class="box-inside-container-row">
               <h2 class="job-title">Latest Jobs</h2>
@@ -109,6 +112,7 @@ import { CallHomeDataService } from '../call-home-data.service';
             </div>
           </div>
           
+          <!-- Result -->
           <div class="container-row">
             <div class="box">
               <h2 class="job-title">Result</h2>
@@ -124,6 +128,7 @@ import { CallHomeDataService } from '../call-home-data.service';
             </div>
           </div>
 
+          <!-- AdmitCard -->
           <div class="container-row">
             <div class="box-inside-container-row">
               <h2 class="job-title">Admit Card</h2>
@@ -139,21 +144,10 @@ import { CallHomeDataService } from '../call-home-data.service';
             </div>
           </div>
 
-        <!-- <div class="container-row">
-          <h2 class="job-title">Admission</h2>
-          <div class="link-list" id="jobs">
-            <a
-              *ngFor="let admission of admissionSet"
-              href="{{ admission.link }}"
-              >{{ admission.title }}</a
-            >
-            <button class="view-more-button">View More</button>
-          </div>
-        </div> -->
         </div>
 
       </div>
-    </ng-template>
+  </ng-template>
   `,
   styleUrls: ['./home.component.css'],
 })
@@ -165,8 +159,6 @@ export class HomeComponent implements OnInit {
   resultSet: any[] = [];
   admitCardSet: any[] = [];
   latestJobSet: any[] = [];
-  answerKeySet: any[] = [];
-  admissionSet: any[] = [];
   // changes for master-details layout
   // showDetails: string = '';
   constructor(private callHomeDataService: CallHomeDataService) {}
@@ -177,8 +169,6 @@ export class HomeComponent implements OnInit {
       this.resultSet = homeData[0];
       this.admitCardSet = homeData[1];
       this.latestJobSet = homeData[2];
-      this.answerKeySet = homeData[3];
-      this.admissionSet = homeData[4];
       this.isLoading = false;
     });
   }

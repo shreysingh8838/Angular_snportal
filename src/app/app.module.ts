@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SinglelistComponent } from './singlelist/singlelist.component';
 import { ProductComponent } from './product/product.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SinglelistComponent,
-    ProductComponent
+    ProductComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { ProductComponent } from './product/product.component';
       { path: 'home', component: HomeComponent },
       { path: 'singlelist', component: SinglelistComponent },
       { path: 'product', component: ProductComponent},
+      { path: 'contact', component: ContactusComponent},
       {path : '', redirectTo: 'home', pathMatch: 'full'},
     ])
   ],
