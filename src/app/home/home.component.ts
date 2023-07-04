@@ -123,6 +123,7 @@ import { CallHomeDataService } from '../call-home-data.service';
                   [queryParams]="{ link: result.link }"
                   >{{ result.title }}</a
                 >
+                <!-- <a routerLink="singlelist" [queryParams]="{set: 'resultSet'}">Result</a> -->
                 <button class="view-more-button">View More</button>
               </div>
             </div>

@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
                     <img src="./assets/india_640 (1).png" class="header-mainimg">
                   </div>
                   <div class="header-text">
-                    <h1 class="header-hindi-text">सरकारी नौकरी पोर्टल</h1>
-                    <h1 class="header-english-text">Sarkari Naukri Portal</h1>
+                    <h1 class="header-hindi-text">मिलेगी सरकारी नौकरी</h1>
+                    <h1 class="header-english-text">Milegi Sarkari Naukri</h1>
                   </div>
                 </header>
                 <nav>
@@ -24,8 +24,8 @@ import { Component, OnInit } from '@angular/core';
                 </nav>
                 <router-outlet></router-outlet>
                 <footer>
-                  <p>&copy; 2023 SarkariNaukriPortal. All rights reserved.</p>
-                  <p>For advertising in this website contact us sarkarinaukriportal@gmail.com</p>
+                  <p>&copy; 2023 MilegiSarkariNaukri. All rights reserved.</p>
+                  <p>For advertising in this website contact us milegisarkarinaukri@gmail.com</p>
 
                   <div class="disclaimer">
                     <p class="">

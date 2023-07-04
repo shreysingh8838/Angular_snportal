@@ -7,8 +7,8 @@ import { Observable, tap } from 'rxjs';
 })
 export class CallProductDataService {
 
-  private sendLinkurl = "http://localhost:8081/prodExtractedLink";
-  private getDataurl = "http://localhost:8081/prodData";
+  private sendLinkurl = "http://localhost:8080/prodExtractedLink";
+  private getDataurl = "http://localhost:8080/prodData";
 
   constructor(private httpClient : HttpClient) { }
 

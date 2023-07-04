@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 
         <div class="row">
           <h4>If Any Feedback or Problem Kindly Mail us on  
-            <a> sarkarinaukriportal@gmail.com </a> OR For Instant Support / Contact Kindly Contact Follow <a>Twitter</a></h4>
+            <a> milegisarkarinaukri@gmail.com </a> OR For Instant Support / Contact Kindly Contact Follow <a>Twitter</a></h4>
         </div>
 
         <div class="row">
@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
             Notification Service : After you Install the Sarkari Naukari Portal Web App You Get the All Vacancy, Result, Admit Card and Other Information Through Notification / Message.
           </p>
           <p>
-            Easy to Find Latest Jobs, Sarkari Naukri, Latest Result, Download Admit Card, Answer Key, Syllabus, Exam Pattern, Admission Notification.
+            Easy to Find Latest Sarkari Jobs, Latest Result, Download Admit Card, Answer Key, Syllabus, Exam Pattern, Admission Notification.
           </p>
         </div>
       
