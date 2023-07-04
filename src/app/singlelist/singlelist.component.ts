@@ -31,12 +31,16 @@ import { Subject } from 'rxjs';
           class="emblemimg"
         />
         
-<!-- Add Pagination over here -->
 <!-- List of Links -->
         <div class="container-row">
-          <h2 class="job-title">{{ title }}</h2> <br>
+          <div class="job-title"> <h2>{{ title }} </h2> </div>
           <div class="link-list" id="jobs">
-            <a *ngFor="let set of requiredSet" (click)="HitClick(set.link)" routerLink="/product" [queryParams]="{ link: set.link }">{{ set.title }}</a>
+            <a *ngFor="let set of displayedSet" (click)="HitClick(set.link)" routerLink="/product" [queryParams]="{ link: set.link }">{{ set.title }}</a>
+          </div>
+<!-- Pagination -->
+          <div class="pagination">
+            <button (click)="goToPreviousPage()" [disabled]="currentPage === 1"> < </button>
+            <button (click)="goToNextPage()" [disabled]="currentPage === getTotalPages()"> > </button>
           </div>
         </div>
       </div>
@@ -48,10 +52,15 @@ export class SinglelistComponent implements OnInit {
   isLoading: boolean = true; // Flag to track loading state
   title: string = '';
   flag: string = '';
-  dataSize: number | undefined;
   requiredSet: any[] = [];
   link: string = '';
 
+  currentPage: number = 1;
+  pageSize: number = 15; // Number of items to display per page
+  displayedSet: any[] = []; // Array to hold the items to display on the current page
+  dataSize: number = 0;
+  totalPages: number = 1;
+  
   private destroy$: Subject<void> = new Subject<void>();
 
   constructor(
@@ -102,6 +111,7 @@ export class SinglelistComponent implements OnInit {
           this.title = 'Result';
           this.dataSize = Data.length;
           this.requiredSet = Data;
+          this.loadPageData(); // Show the first lot of data when the page loads
           this.isLoading = false; // Set loading flag to false once data is fetched
         });
         break;
@@ -111,6 +121,7 @@ export class SinglelistComponent implements OnInit {
           this.dataSize = Data.length;
           console.log("this is length" + Data.length);
           this.requiredSet = Data;
+          this.loadPageData(); // Show the first lot of data when the page loads
           this.isLoading = false; // Set loading flag to false once data is fetched
         });
         break;
@@ -119,6 +130,7 @@ export class SinglelistComponent implements OnInit {
           this.title = 'Admit Cards';
           this.dataSize = Data.length;
           this.requiredSet = Data;
+          this.loadPageData(); // Show the first lot of data when the page loads
           this.isLoading = false; // Set loading flag to false once data is fetched
         });
         break;
@@ -127,6 +139,7 @@ export class SinglelistComponent implements OnInit {
           this.title = 'Answer Keys';
           this.dataSize = Data.length;
           this.requiredSet = Data;
+          this.loadPageData(); // Show the first lot of data when the page loads
           this.isLoading = false; // Set loading flag to false once data is fetched
         });
         break;
@@ -135,6 +148,7 @@ export class SinglelistComponent implements OnInit {
           this.title = 'Admission Forms';
           this.dataSize = Data.length;
           this.requiredSet = Data;
+          this.loadPageData(); // Show the first lot of data when the page loads
           this.isLoading = false; // Set loading flag to false once data is fetched
         });
         break;
@@ -143,6 +157,7 @@ export class SinglelistComponent implements OnInit {
           this.title = 'Syllabus';
           this.dataSize = Data.length;
           this.requiredSet = Data;
+          this.loadPageData(); // Show the first lot of data when the page loads
           this.isLoading = false; // Set loading flag to false once data is fetched
         });
         break;
@@ -152,4 +167,30 @@ export class SinglelistComponent implements OnInit {
     }
   }
   
+  getTotalPages(): number {
+    return Math.ceil(this.dataSize / this.pageSize);
+  }
+
+  loadPageData() {
+    // Calculate the starting and ending indexes for the current page
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    const endIndex = Math.min(startIndex + this.pageSize, this.dataSize);
+
+    // Get the items to display on the current page
+    this.displayedSet = this.requiredSet.slice(startIndex, endIndex);
+  }
+
+  goToPreviousPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.loadPageData();
+    }
+  }
+
+  goToNextPage() {
+    if (this.currentPage < this.getTotalPages()) {
+      this.currentPage++;
+      this.loadPageData();
+    }
+  }
 }
