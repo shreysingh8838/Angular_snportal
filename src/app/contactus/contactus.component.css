@@ -9,7 +9,8 @@
 
   .container-row{
     width: 60%;
-    background-color: #F1F1F1;
+    background-color: #f9f9f9;
+    border: 0.5px solid #000; 
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
