@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CallSingleListService {
-  private apiUrl = 'http://localhost:8080/';
+  private apiUrl = 'http://localhost:9090/';
   
   constructor(private http : HttpClient) { }
 
