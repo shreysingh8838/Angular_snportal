@@ -28,10 +28,10 @@ import { Component } from '@angular/core';
 
         <div class="social-media-icons">
     <a href="https://www.facebook.com/your-facebook-page" target="_blank">
-      <img src="https://www.pngkit.com/png/detail/321-3211583_footer-facebook-logo-for-footer-png.png" alt="Facebook">
+      <img src="../assets/fbfooterLogo.jpg" alt="Facebook">
     </a>
     <a href="https://www.twitter.com/your-twitter-page" target="_blank">
-      <img src="https://e7.pngegg.com/pngimages/708/311/png-clipart-twitter-twitter-thumbnail.png" alt="Twitter">
+      <img src="../assets/twitterFooterLogo.png" alt="Twitter">
     </a>
     <!-- Add more social media icons here as needed -->
   </div>

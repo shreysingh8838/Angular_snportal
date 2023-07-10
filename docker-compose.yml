@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  frontend:
+    image: shrey8838/milgyi-sarkari-naukri-angular:v1.2
+    ports:
+      - 80:80
+    environment:
+      - API_ENDPOINT=http://backend:8080
+    networks:
+      - my-network
+
+  backend:
+    image: shrey8838/milgyi-sarkari-naukri-backend:v1.3
+    ports:
+      - 9090:8080
+    networks:
+      - my-network
+
+networks:
+  my-network:
