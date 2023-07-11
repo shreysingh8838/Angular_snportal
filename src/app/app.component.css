@@ -1,67 +1,210 @@
-.header-text{
-    padding-top: 10px;
-    /* color: rgb(159, 230, 240); */
-    color: #111;
+.header-text {
+  padding-top: 10px;
+  color: #111;
 }
 
-.header-hindi-text{
-    font-size: 19px;
+.header-hindi-text {
+  font-size: 19px;
 }
 
-.header-english-text{
-    margin-top: -15px;
-    font-size: 40px;
-    font-weight: 800;
+.header-english-text {
+  margin-top: -15px;
+  font-size: 40px;
+  font-weight: 800;
 }
 
-.header-mainimg{
-    margin-bottom: 10px;
-    height: 100px;
-    width: auto;
+.header-mainimg {
+  margin-bottom: 10px;
+  height: 100px;
+  width: auto;
 }
 
 header {
-    background-color: white;
-    text-align: center;
-    font-size: 26px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  background-color: white;
+  text-align: center;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative; /* Add position relative */
 }
 
 nav {
-    margin-top: -15px;
-    background-color: #F6F3EE;
-    padding: 10px;
-    text-align: center;
+  margin-top: -15px;
+  background-color: #f6f3ee;
+  padding: 10px;
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+nav.open {
+  max-height: 300px; /* Adjust the value as needed */
 }
 
 nav a {
-    color: #111;
-    text-decoration: none;
-    padding-right: 25px;
-    font-size: 16px;
-    font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  padding-right: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  display: block; /* Change to block element */
 }
 
 nav a:hover {
-    color: #666;
-    transform: scale(1.05); /* Add a slight scale effect on hover */
+  color: #666;
+  transform: scale(1.05);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f3ee;
+  padding: 10px;
+  min-width: 150px;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
 }
 
 /* Add this style for the footer */
 footer {
-    background-color: #F6F3EE;
-    text-align: center;
-    padding: 10px;
-    color: #111;
-    font-size: 14px;
+  background-color: #f6f3ee;
+  text-align: center;
+  padding: 10px;
+  color: #111;
+  font-size: 14px;
+}
+
+.disclaimer {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .header-english-text {
+    font-size: 30px;
   }
 
-.disclaimer{
-    color: red;
-    font-size: 10px;
-    text-align: center;
+  nav a {
+    font-size: 14px;
+    padding-right: 15px;
+  }
+
+  .footer {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .disclaimer {
+    font-size: 11px;
+  }
 }
-  
+
+@media (max-width: 480px) {
+  .header-text {
+    padding-top: 10px;
+  }
+
+  .header-hindi-text {
+    font-size: 16px;
+  }
+
+  .header-english-text {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .header-mainimg {
+    height: 70px;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding-right: 10px;
+  }
+
+  .footer {
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .footerp {
+    font-size: 12px;
+  }
+
+  .disclaimer {
+    font-size: 10px;
+  }
+}
+
+/* Styles for menu icon */
+.menu-icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.icon-bar {
+  width: 20px;
+  height: 2px;
+  background-color: #111;
+  margin-bottom: 4px;
+}
+
+.open .icon-bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.open .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.open .icon-bar:nth-child(3) {
+  transform: rotate(45deg) translate(-4px, -4px);
+}
+
+@media (max-width: 767px) {
+  nav {
+    padding-top: 40px;
+    /* visibility: hidden; */
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  .open a {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .dropdown.open .dropdown-content {
+    top: 50px;
+    left: 0;
+    min-width: 100%;
+  }
+}

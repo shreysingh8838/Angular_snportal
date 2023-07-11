@@ -92,7 +92,7 @@ import { CallHomeDataService } from '../call-home-data.service';
       
 <!-- NON MASTER DETAILS LAYOUT -->  
       <div class="container-wrapper">
-        <marquee behavior="alternate" direction=""><h2>Welcome to India's No. 1 Portal for Sarkari Naukri</h2></marquee>
+        <marquee behavior="alternate" direction=""><h2 class="welh2">Welcome to India's No. 1 Portal for Sarkari Naukri</h2></marquee>
         
         <div class="box1">
 

@@ -11,21 +11,27 @@ import { Component, OnInit } from '@angular/core';
                     <h1 class="header-hindi-text">मिलेगी सरकारी नौकरी</h1>
                     <h1 class="header-english-text">Milegi Sarkari Naukri</h1>
                   </div>
+                  <div class="menu-icon" (click)="toggleNav()">
+                    <div class="icon-bar"></div>
+                    <div class="icon-bar"></div>
+                    <div class="icon-bar"></div>
+                  </div>
                 </header>
-                <nav>
+                <nav [ngClass]="{ 'open': isNavOpen }">
                   <a routerLink="home">Home</a>
-                  <a routerLink="singlelist" [queryParams]="{set: 'resultSet'}">Result</a>
-                  <a routerLink="singlelist" [queryParams]="{set: 'latestjob'}">Latest Jobs</a>
-                  <a routerLink="singlelist" [queryParams]="{set: 'admitcard'}">Admit Cards</a>
-                  <a routerLink="singlelist" [queryParams]="{set: 'answerkey'}">Answer Keys</a>
-                  <a routerLink="singlelist" [queryParams]="{set: 'admission'}">Admission Forms</a>
-                  <a routerLink="singlelist" [queryParams]="{set: 'syllabus'}">Syllabus</a>
-                  <a routerLink="contact" >Contact Us</a>
+                      <a routerLink="singlelist" [queryParams]="{set: 'resultSet'}">Result</a>
+                      <a routerLink="singlelist" [queryParams]="{set: 'latestjob'}">Latest Jobs</a>
+                      <a routerLink="singlelist" [queryParams]="{set: 'admitcard'}">Admit Cards</a>
+                      <a routerLink="singlelist" [queryParams]="{set: 'answerkey'}">Answer Keys</a>
+                      <a routerLink="singlelist" [queryParams]="{set: 'admission'}">Admission Forms</a>
+                      <a routerLink="singlelist" [queryParams]="{set: 'syllabus'}">Syllabus</a>
+                  <a routerLink="contact">Contact Us</a>
                 </nav>
+
                 <router-outlet></router-outlet>
                 <footer>
-                  <p>&copy; 2023 MilegiSarkariNaukri. All rights reserved.</p>
-                  <p>For advertising in this website contact us milegisarkarinaukri@gmail.com</p>
+                  <p class="footerp">&copy; 2023 MilegiSarkariNaukri. All rights reserved.</p>
+                  <p class="footerp">For advertising in this website contact us milegisarkarinaukri@gmail.com</p>
 
                   <div class="disclaimer">
                     <p class="">
@@ -37,4 +43,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  isNavOpen: boolean = false;
+  isDropdownOpen: boolean = false;
+
+  toggleNav(): void {
+    this.isNavOpen = !this.isNavOpen;
+  }
+
+  toggleDropdown(): void {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
 }

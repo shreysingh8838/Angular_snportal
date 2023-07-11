@@ -1,4 +1,3 @@
-/*  */
 .emblemimg{
     height: 150px;
     width: auto;
@@ -103,35 +102,81 @@ h1 {
   transform: scale(1.05); /* Add a slight scale effect on hover */
 }
 
-/* Media query for small devices */
-@media (max-width: 767px) {
-    .banner-image {
-      max-width: 100%; /* Set the maximum width to 100% for small devices */
-      max-height: 100%;
+/* Media queries for responsiveness */
+@media (max-width: 346px) {
+    .banner-img {
+      height: 55vh;
+      display: none;
     }
-    .box1{
-        display: block;
-        width: fit-content;
+    .welh2{
+        font-size: 12px;
+    }
+    .box1 {
+      flex-direction: column;
+      width: 80%;
+    }
+    .job-title{
+        font-size: 18px;
+    }
+    .link-list a{
+        font-size: 14px;
+    }
+    .view-more-button{
+        visibility: hidden;
+    }
+    .loading-text{
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    .loadingemblemimg{
+        height: 100px;
+        width: auto;
+        margin-top: 0;
+    }
+  }
+
+@media (max-width: 767px) and (min-width: 480px) {
+    .banner-img {
+      height: 55vh;
+    }
+    .welh2{
+        font-size: 15px;
+    }
+    .box1 {
+      flex-direction: column;
+      width: 80%;
+    }
+    .job-title{
+        font-size: 18px;
+    }
+    .link-list a{
+        font-size: 14px;
+    }
+    .view-more-button{
+        visibility: hidden;
+    }
+    .loading-text{
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    .loadingemblemimg{
+        height: 100px;
+        width: auto;
+        margin-top: 0;
     }
   }
   
-  /* Media query for medium devices */
   @media (min-width: 768px) and (max-width: 991px) {
-    .banner-image {
-      max-width: 80%; /* Set the maximum width to 80% for medium devices */
-      max-height: 80%;
-    }
-    .box1{
-        display: block;
-        width: fit-content;
+    .banner-img {
+      height: 50vh;
     }
   }
   
-  /* Media query for large devices */
   @media (min-width: 992px) {
-    .banner-image {
-      max-width: 60%; /* Set the maximum width to 60% for large devices */
-      max-height: 60%;
+    .banner-img {
+      height: 60vh;
     }
   }
 

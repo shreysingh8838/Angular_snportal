@@ -25,26 +25,16 @@ import { Component } from '@angular/core';
         </div>
       
         <div class="row">
-
-        <div class="social-media-icons">
-    <a href="https://www.facebook.com/your-facebook-page" target="_blank">
-      <img src="../assets/fbfooterLogo.jpg" alt="Facebook">
-    </a>
-    <a href="https://www.twitter.com/your-twitter-page" target="_blank">
-      <img src="../assets/twitterFooterLogo.png" alt="Twitter">
-    </a>
-    <!-- Add more social media icons here as needed -->
-  </div>
+          <div class="social-media-icons">
+            <a href="https://www.facebook.com/your-facebook-page" target="_blank">
+              <img src="../assets/fbfooterLogo.jpg" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com/your-twitter-page" target="_blank">
+              <img src="../assets/twitterFooterLogo.png" alt="Twitter">
+            </a>
+            <!-- Add more social media icons here as needed -->
+          </div>
         </div>
-
-        <div class="row">
-          
-        </div>
-
-        <div class="row">
-          
-        </div>
-
     </div>
   </div>
 </div>

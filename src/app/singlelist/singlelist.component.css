@@ -110,4 +110,27 @@
     outline: none;
     box-shadow: 0 0 0 3px rgba(53, 161, 209, 0.4);
   }
-  
+  @media (max-width: 767px) {
+    .container-row {
+      width: 65%;
+    }
+    .emblemimg {
+      width: 100px;
+  }
+  .job-title{
+    font-size: 18px;
+  }
+  .link-list a{
+      font-size: 14px;
+  }
+  .loading-text{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .loadingemblemimg{
+      height: 100px;
+      width: auto;
+      margin-top: 0;
+  }
+}
