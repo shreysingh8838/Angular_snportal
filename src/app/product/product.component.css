@@ -118,10 +118,10 @@
   
   @media (max-width: 767px) {
     .container-row {
-      width: 70%;
+      width: 80%;
     }
     .row-wrapper {
-      width: 70%;
+      width: 80%;
     }
     .loading-text{
       font-size: 20px;
@@ -159,10 +159,10 @@
       font-size: 12px;
     }
     .row-wrapper .h4{
-      font-size: 15px;
+      font-size: 18px;
     }
     .row h3{
-      font-size: 18px;
+      font-size: 15px;
     }
     .row li{
       font-size: 14px;

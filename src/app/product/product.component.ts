@@ -144,7 +144,7 @@ export class ProductComponent implements OnInit{
 
   private HitClick(link : string){
     this.callProductData.sendLink(link).subscribe((data : any) => {
-      console.log(data);
+      // console.log(data);
       this.homedata = data;
       const headingContent = data.table_Content;
       this.headingContent = headingContent.filter((str: string) => str !== 'WWW.SARKARIRESULT.COM');
@@ -168,14 +168,14 @@ export class ProductComponent implements OnInit{
       this.downloadLinks = data.usefulLinks.downloads;
 
       this.isLoading = false;
-      console.log("Product data service hit");
+      // console.log("Product data service hit");
     },
     error => console.log(error));
   }
 
   ngOnInit(): void {
     this.link = this.route.snapshot.queryParams['link'];
-    console.log("prod component hit");
+    // console.log("prod component hit");
     this.HitClick(this.link);
   }
 }

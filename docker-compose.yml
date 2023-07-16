@@ -2,7 +2,7 @@ version: "3"
 
 services:
   frontend:
-    image: shrey8838/milgyi-sarkari-naukri-angular:v1.2
+    image: shrey8838/milgyi-sarkari-naukri-angular:v1.11
     ports:
       - 80:80
     environment:
@@ -11,7 +11,7 @@ services:
       - my-network
 
   backend:
-    image: shrey8838/milgyi-sarkari-naukri-backend:v1.3
+    image: shrey8838/milgyi-sarkari-naukri-backend:v1.4
     ports:
       - 9090:8080
     networks:

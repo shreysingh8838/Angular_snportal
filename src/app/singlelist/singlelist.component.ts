@@ -73,7 +73,7 @@ export class SinglelistComponent implements OnInit {
   HitClick(link: string) {
     this.link = link;
     this.callProductData.sendLink(this.link);
-    console.log("method hit");
+    // console.log("method hit");
   }
 
   ngOnInit() {

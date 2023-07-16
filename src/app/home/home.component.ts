@@ -93,7 +93,8 @@ import { CallHomeDataService } from '../call-home-data.service';
 <!-- NON MASTER DETAILS LAYOUT -->  
       <div class="container-wrapper">
         <marquee behavior="alternate" direction=""><h2 class="welh2">Welcome to India's No. 1 Portal for Sarkari Naukri</h2></marquee>
-        
+        <marquee behavior="alternate" direction=""><h4 class="welh4">A centralized platform to access the latest government job notifications, exam results, admit cards, answer keys, admission forms, and syllabus </h4></marquee>
+
         <div class="box1">
 
           <!-- Latest job -->
@@ -115,7 +116,7 @@ import { CallHomeDataService } from '../call-home-data.service';
           <!-- Result -->
           <div class="container-row">
             <div class="box">
-              <h2 class="job-title">Result</h2>
+              <h2 class="job-title">Latest Result</h2>
               <div class="link-list" id="jobs">
                 <a
                   *ngFor="let result of resultSet"
@@ -132,7 +133,7 @@ import { CallHomeDataService } from '../call-home-data.service';
           <!-- AdmitCard -->
           <div class="container-row">
             <div class="box-inside-container-row">
-              <h2 class="job-title">Admit Card</h2>
+              <h2 class="job-title">Latest Admit Card</h2>
               <div class="link-list" id="jobs">
                 <a
                   *ngFor="let admitCard of admitCardSet"
@@ -144,7 +145,6 @@ import { CallHomeDataService } from '../call-home-data.service';
               </div>
             </div>
           </div>
-
         </div>
 
       </div>
@@ -166,13 +166,33 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.callHomeDataService.getHomeDataList().subscribe((homeData: any[]) => {
-      console.log(homeData);
+      console.log("v10");
+      // console.log(homeData);
       this.resultSet = homeData[0];
       this.admitCardSet = homeData[1];
       this.latestJobSet = homeData[2];
       this.isLoading = false;
+      
+      // Add media query listener
+      const mediaQuery = window.matchMedia('(max-width: 767px)');
+      this.handleMediaQueryChange(mediaQuery); // Call the method initially
+      mediaQuery.addListener(this.handleMediaQueryChange.bind(this));
     });
   }
+
+  handleMediaQueryChange(mediaQuery: MediaQueryListEvent | MediaQueryList): void {
+    if ((mediaQuery as MediaQueryListEvent).matches) {
+      // Media query matches, handle accordingly
+      console.log('Media query matches');
+      this.resultSet = this.resultSet.slice(0,5);
+      this.admitCardSet = this.admitCardSet.slice(0,5);
+      this.latestJobSet = this.latestJobSet.slice(0,5);
+    } else {
+      // Media query doesn't match
+      console.log('Media query doesn\'t match');
+    }
+  }
+  
 
   // changes for master-details layout
   // toggleDetails(details: string) {

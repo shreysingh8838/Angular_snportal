@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   template: `
                 <header>
+                  
                   <div class="header-img">
                     <img src="./assets/india_640 (1).png" class="header-mainimg">
                   </div>
@@ -11,21 +12,24 @@ import { Component, OnInit } from '@angular/core';
                     <h1 class="header-hindi-text">मिलेगी सरकारी नौकरी</h1>
                     <h1 class="header-english-text">Milegi Sarkari Naukri</h1>
                   </div>
-                  <div class="menu-icon" (click)="toggleNav()">
-                    <div class="icon-bar"></div>
-                    <div class="icon-bar"></div>
-                    <div class="icon-bar"></div>
-                  </div>
+                  
                 </header>
+
                 <nav [ngClass]="{ 'open': isNavOpen }">
-                  <a routerLink="home">Home</a>
-                      <a routerLink="singlelist" [queryParams]="{set: 'resultSet'}">Result</a>
-                      <a routerLink="singlelist" [queryParams]="{set: 'latestjob'}">Latest Jobs</a>
-                      <a routerLink="singlelist" [queryParams]="{set: 'admitcard'}">Admit Cards</a>
-                      <a routerLink="singlelist" [queryParams]="{set: 'answerkey'}">Answer Keys</a>
-                      <a routerLink="singlelist" [queryParams]="{set: 'admission'}">Admission Forms</a>
-                      <a routerLink="singlelist" [queryParams]="{set: 'syllabus'}">Syllabus</a>
-                  <a routerLink="contact">Contact Us</a>
+                  <div class="menu-icon-left" (click)="toggleNav()">
+                    <img class="menu-icon-pic" src="./assets/dropdown-removebg-preview.png" alt="">
+                  </div>
+                  <div class="nav-a-list">
+                    <a routerLink="home">Home</a>
+                    <a routerLink="singlelist" [queryParams]="{set: 'resultSet'}">Result</a>
+                    <a routerLink="singlelist" [queryParams]="{set: 'latestjob'}">Latest Jobs</a>
+                    <a routerLink="singlelist" [queryParams]="{set: 'admitcard'}">Admit Cards</a>
+                    <a routerLink="singlelist" [queryParams]="{set: 'answerkey'}">Answer Keys</a>
+                    <a routerLink="singlelist" [queryParams]="{set: 'admission'}">Admission Forms</a>
+                    <a routerLink="singlelist" [queryParams]="{set: 'syllabus'}">Syllabus</a>
+                    <a routerLink="contact">Contact Us</a>
+                  </div>
+                  
                 </nav>
 
                 <router-outlet></router-outlet>
