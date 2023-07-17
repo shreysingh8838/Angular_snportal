@@ -7,10 +7,10 @@ import { Observable, tap } from 'rxjs';
 })
 export class CallProductDataService {
 
-  private sendLinkurl = "https://43.205.215.50:9090/prodExtractedLink";
+  private sendLinkurl = "http://43.205.215.50:9090/prodExtractedLink";
   // private sendLinkurl = "http://localhost:8080/prodExtractedLink";
 
-  private getDataurl = "https://43.205.215.50:9090/prodData";
+  private getDataurl = "http://43.205.215.50:9090/prodData";
   // private getDataurl = "http://localhost:8080/prodData";
 
 
