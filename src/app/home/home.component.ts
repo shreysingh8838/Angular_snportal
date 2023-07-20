@@ -166,7 +166,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.callHomeDataService.getHomeDataList().subscribe((homeData: any[]) => {
-      console.log("v10");
+      console.log("v15");
       // console.log(homeData);
       this.resultSet = homeData[0];
       this.admitCardSet = homeData[1];
