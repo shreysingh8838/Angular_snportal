@@ -166,7 +166,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.callHomeDataService.getHomeDataList().subscribe((homeData: any[]) => {
-      console.log("v16");
+      console.log("v20");
       // console.log(homeData);
       this.resultSet = homeData[0];
       this.admitCardSet = homeData[1];
@@ -192,8 +192,6 @@ export class HomeComponent implements OnInit {
       console.log('Media query doesn\'t match');
     }
   }
-  
-
   // changes for master-details layout
   // toggleDetails(details: string) {
   //   this.showDetails = details;

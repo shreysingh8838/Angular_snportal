@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CallHomeDataService {
-  private homeApi = 'http://43.205.215.50:9090/home';
-  // private homeApi = 'http://localhost:8080/home';
+  // private homeApi = 'https://43.205.215.50:9090/home';
+  private homeApi = 'https://milegisarkarinaukri.online:9090/home';
 
   constructor(private http: HttpClient) { }
 

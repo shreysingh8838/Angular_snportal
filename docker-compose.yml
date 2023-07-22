@@ -2,20 +2,45 @@ version: "3"
 
 services:
   frontend:
-    image: shrey8838/milgyi-sarkari-naukri-angular:v1.16
+    image: shrey8838/milgyi-sarkari-naukri-angular:v1.20
     ports:
       - 80:80
+      - 443:443
     environment:
       - API_ENDPOINT=http://backend:8080
     networks:
       - my-network
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
 
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes: 
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    command: certonly --webroot -w /var/www/certbot --force-renewal --email shrey8838@gmail.com -d milegisarkarinaukri.online --agree-tos
+  
   backend:
-    image: shrey8838/milgyi-sarkari-naukri-backend:v1.4
+    image: shrey8838/milgyi-sarkari-naukri-backend:v1.5
     ports:
-      - 9090:8080
+      - 8080
     networks:
       - my-network
+
+  nginx-proxy: # Add an Nginx service as the HTTPS termination proxy
+    image: nginx:latest
+    ports:
+      - 9090:443 # Listen on port 9090 for HTTPS requests
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    networks:
+      - my-network
+    depends_on:
+      - backend
 
 networks:
   my-network:
