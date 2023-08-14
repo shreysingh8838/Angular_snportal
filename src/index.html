@@ -15,8 +15,17 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-0296CWM3J7');
+    var ApplyLinkTracking = function(url) {
+      gtag('event', 'click', {
+          'event_category': 'JobApplyLink',
+          'event_label': url,
+          'transport_type': 'beacon',
+          'event_callback': function() {
+              document.location = url;
+          }
+      });
+    }
   </script>
 </head>
 <body>
