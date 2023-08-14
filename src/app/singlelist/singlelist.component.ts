@@ -35,7 +35,7 @@ import { Subject } from 'rxjs';
         <div class="container-row">
           <div class="job-title"> <h2>{{ title }} </h2> </div>
           <div class="link-list" id="jobs">
-            <a *ngFor="let set of displayedSet" (click)="HitClick(set.link)" routerLink="/product" [queryParams]="{ link: set.link }">{{ set.title }}</a>
+            <a *ngFor="let set of displayedSet" target="_blank" (click)="HitClick(set.link)" routerLink="/product" [queryParams]="{ link: set.link }">{{ set.title }}</a>
           </div>
 <!-- Pagination -->
           <div class="pagination">

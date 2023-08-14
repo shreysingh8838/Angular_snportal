@@ -2,7 +2,8 @@ version: "3"
 
 services:
   frontend:
-    image: shrey8838/milgyi-sarkari-naukri-angular:v1.20
+    # image: shrey8838/milgyi-sarkari-naukri-angular:v1.21
+    image: shrey8838/milgyi-sarkari-naukri-angular:21
     ports:
       - 80:80
       - 443:443

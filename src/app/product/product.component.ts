@@ -34,12 +34,12 @@ import { CallProductDataService } from '../call-product-data.service';
 
       <div class="button-wrapper">
         <!-- Official Website -->
-        <a href="{{ officialWebsite }}">
+        <a href="{{ officialWebsite }}" target="_blank" >
           <button class="btn-primary">Official Website</button>
         </a>
 
         <!-- Apply Online -->
-        <a href="{{ applyOnlineLink }}">
+        <a href="{{ applyOnlineLink }}" target="_blank" >
           <button class="btn-primary">Apply Online</button>
         </a>
       </div>
@@ -98,7 +98,7 @@ import { CallProductDataService } from '../call-product-data.service';
           <div class="downloads-list">
             <ul class="downloads-list">
               <li *ngFor="let entry of downloadLinks | keyvalue">
-                <a href="{{ entry.value }}">
+                <a href="{{ entry.value }}"  target="_blank" >
                   <button class="btn-secondary">{{ entry.key }}</button>
                 </a>
               </li>

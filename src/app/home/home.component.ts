@@ -93,7 +93,9 @@ import { CallHomeDataService } from '../call-home-data.service';
 <!-- NON MASTER DETAILS LAYOUT -->  
       <div class="container-wrapper">
         <marquee behavior="alternate" direction=""><h2 class="welh2">Welcome to India's No. 1 Portal for Sarkari Naukri</h2></marquee>
-        <marquee behavior="alternate" direction=""><h4 class="welh4">A centralized platform to access the latest government job notifications, exam results, admit cards, answer keys, admission forms, and syllabus </h4></marquee>
+        <!-- <marquee behavior="alternate" direction=""><h4 class="welh4">A centralized platform to access the latest government job notifications, exam results, admit cards, answer keys, admission forms, and syllabus </h4></marquee> -->
+        <h4 class="welh4">A centralized platform to access the latest government job notifications, exam results</h4>
+        <h4 class="welh4"> OR admit cards, answer keys, admission forms, and syllabus </h4>
 
         <div class="box1">
 
@@ -106,8 +108,9 @@ import { CallHomeDataService } from '../call-home-data.service';
                   *ngFor="let latestjob of latestJobSet"
                   routerLink="/product"
                   [queryParams]="{ link: latestjob.link }"
-                  >{{ latestjob.title }}</a
-                >
+                  target="_blank"
+                  >{{ latestjob.title }}
+                </a>
                 <button class="view-more-button">View More</button>
               </div>
             </div>
@@ -122,8 +125,9 @@ import { CallHomeDataService } from '../call-home-data.service';
                   *ngFor="let result of resultSet"
                   routerLink="/product"
                   [queryParams]="{ link: result.link }"
-                  >{{ result.title }}</a
-                >
+                  target="_blank" 
+                  >{{ result.title }}
+                </a>
                 <!-- <a routerLink="singlelist" [queryParams]="{set: 'resultSet'}">Result</a> -->
                 <button class="view-more-button">View More</button>
               </div>
@@ -139,6 +143,7 @@ import { CallHomeDataService } from '../call-home-data.service';
                   *ngFor="let admitCard of admitCardSet"
                   routerLink="/product"
                   [queryParams]="{ link: admitCard.link }"
+                  target="_blank" 
                   >{{ admitCard.title }}</a
                 >
                 <button class="view-more-button">View More</button>

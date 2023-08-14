@@ -35,7 +35,7 @@ import { Component, OnInit } from '@angular/core';
                 <router-outlet></router-outlet>
                 <footer>
                   <p class="footerp">&copy; 2023 MilegiSarkariNaukri. All rights reserved.</p>
-                  <p class="footerp">For advertising in this website contact us milegisarkarinaukri@gmail.com</p>
+                  <p class="footerp">For advertising in this website contact us milegisarkarinaukrii@gmail.com</p>
 
                   <div class="disclaimer">
                     <p class="">
