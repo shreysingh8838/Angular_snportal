@@ -95,8 +95,7 @@ import { Title } from '@angular/platform-browser';
       <div class="container-wrapper">
         <marquee behavior="alternate" direction=""><h2 class="welh2">Welcome to India's No. 1 Portal for Sarkari Naukri</h2></marquee>
         <!-- <marquee behavior="alternate" direction=""><h4 class="welh4">A centralized platform to access the latest government job notifications, exam results, admit cards, answer keys, admission forms, and syllabus </h4></marquee> -->
-        <h4 class="welh4">A centralized platform to access the latest government job notifications, exam results</h4>
-        <h4 class="welh4"> OR admit cards, answer keys, admission forms, and syllabus </h4>
+        <h4 class="welh4">A centralized platform to access the latest government job notifications, exam results OR admit cards, answer keys, admission forms, and syllabus </h4>
 
         <div class="box1">
 
