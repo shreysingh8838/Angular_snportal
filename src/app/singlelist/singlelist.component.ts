@@ -4,6 +4,7 @@ import { RouterLink, ActivatedRoute, Router, NavigationEnd } from '@angular/rout
 import { CallProductDataService } from '../call-product-data.service';
 import { filter, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-singlelist',
@@ -60,14 +61,15 @@ export class SinglelistComponent implements OnInit {
   displayedSet: any[] = []; // Array to hold the items to display on the current page
   dataSize: number = 0;
   totalPages: number = 1;
-  
+  setName: string = '';
   private destroy$: Subject<void> = new Subject<void>();
 
   constructor(
     private route: ActivatedRoute,
     private callSingleListService: CallSingleListService,
     private callProductData: CallProductDataService,
-    private router : Router
+    private router : Router,
+    private titleService: Title
   ) {}
 
   HitClick(link: string) {
@@ -90,6 +92,7 @@ export class SinglelistComponent implements OnInit {
   
     // Call the component initialization logic immediately
     this.initializeComponent();
+
   }
   
   ngOnDestroy() {
@@ -102,11 +105,12 @@ export class SinglelistComponent implements OnInit {
     const queryParams = this.route.snapshot.queryParams;
   
     // Extract the 'set' parameter value
-    const set = queryParams['set'];
+    this.setName = queryParams['set'];
   
     // Perform the necessary actions based on the 'set' value
-    switch (set) {
+    switch (this.setName) {
       case 'resultSet':
+        this.titleService.setTitle('Results | Milegi Sarkari Naukri');
         this.callSingleListService.getDataList('resultSet').subscribe((Data: any[]) => {
           this.title = 'Result';
           this.dataSize = Data.length;
@@ -116,6 +120,7 @@ export class SinglelistComponent implements OnInit {
         });
         break;
       case 'latestjob':
+        this.titleService.setTitle('Latest Jobs | Milegi Sarkari Naukri');
         this.callSingleListService.getDataList('latestjob').subscribe((Data: any[]) => {
           this.title = 'Latest Jobs';
           this.dataSize = Data.length;
@@ -126,6 +131,8 @@ export class SinglelistComponent implements OnInit {
         });
         break;
       case 'admitcard':
+        this.titleService.setTitle('Admit Cards | Milegi Sarkari Naukri');
+
         this.callSingleListService.getDataList('admitcard').subscribe((Data: any[]) => {
           this.title = 'Admit Cards';
           this.dataSize = Data.length;
@@ -135,6 +142,8 @@ export class SinglelistComponent implements OnInit {
         });
         break;
       case 'answerkey':
+        this.titleService.setTitle('Answer Keys | Milegi Sarkari Naukri');
+
         this.callSingleListService.getDataList('answerkey').subscribe((Data: any[]) => {
           this.title = 'Answer Keys';
           this.dataSize = Data.length;
@@ -144,6 +153,8 @@ export class SinglelistComponent implements OnInit {
         });
         break;
       case 'admission':
+        this.titleService.setTitle('Admissions | Milegi Sarkari Naukri');
+
         this.callSingleListService.getDataList('admission').subscribe((Data: any[]) => {
           this.title = 'Admission Forms';
           this.dataSize = Data.length;
@@ -153,6 +164,8 @@ export class SinglelistComponent implements OnInit {
         });
         break;
       case 'syllabus':
+        this.titleService.setTitle('Syllabus | Milegi Sarkari Naukri');
+
          this.callSingleListService.getDataList('syllabus').subscribe((Data: any[]) => {
           this.title = 'Syllabus';
           this.dataSize = Data.length;

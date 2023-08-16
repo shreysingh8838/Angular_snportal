@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CallHomeDataService } from '../call-home-data.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -167,11 +168,15 @@ export class HomeComponent implements OnInit {
   latestJobSet: any[] = [];
   // changes for master-details layout
   // showDetails: string = '';
-  constructor(private callHomeDataService: CallHomeDataService) {}
+  constructor(private callHomeDataService: CallHomeDataService, 
+              private titleService: Title
+              ) {}
 
   ngOnInit() {
+    this.titleService.setTitle('Home | Milegi Sarkari Naukri');
+
     this.callHomeDataService.getHomeDataList().subscribe((homeData: any[]) => {
-      console.log("v20");
+      console.log("v22");
       // console.log(homeData);
       this.resultSet = homeData[0];
       this.admitCardSet = homeData[1];

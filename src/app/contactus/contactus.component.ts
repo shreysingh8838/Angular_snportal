@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contactus',
@@ -45,4 +46,9 @@ import { Component } from '@angular/core';
 })
 export class ContactusComponent {
 
+  constructor(private titleService: Title) { }
+
+  ngOnInit() {
+    this.titleService.setTitle('Contact Us | Milegi Sarkari Naukri');
+  }
 }
