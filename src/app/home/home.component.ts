@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CallHomeDataService } from '../call-home-data.service';
 import { Title } from '@angular/platform-browser';
+import { CallSingleListService } from '../call-single-list.service';
+
 
 @Component({
   selector: 'app-home',
@@ -168,8 +170,14 @@ export class HomeComponent implements OnInit {
   // changes for master-details layout
   // showDetails: string = '';
   constructor(private callHomeDataService: CallHomeDataService, 
+              private callSingleListService: CallSingleListService,
               private titleService: Title
               ) {}
+
+  result : any[] = [];
+  latestjobs : any[] = [];
+  admitcards : any[] = [];
+  searchset : any[] = [];
 
   ngOnInit() {
     this.titleService.setTitle('Home | Milegi Sarkari Naukri');
@@ -187,8 +195,35 @@ export class HomeComponent implements OnInit {
       this.handleMediaQueryChange(mediaQuery); // Call the method initially
       mediaQuery.addListener(this.handleMediaQueryChange.bind(this));
     });
+
+    this.getWholeList();
   }
 
+  getWholeList(){
+    // Calling all the list services at a same time and adding it to the searchList
+    // Now we can directly search the keyword from here
+    this.callSingleListService.getDataList('resultSet').subscribe((Data: any[]) => {
+      this.result = Data;
+      this.searchset = [...this.searchset, ...this.result];
+      // console.log(this.searchset);
+    });
+    this.callSingleListService.getDataList('latestjob').subscribe((Data: any[]) => {
+      this.latestjobs = Data;
+      this.searchset = [...this.searchset, ...this.latestjobs];
+      // console.log(this.searchset);
+    });
+    this.callSingleListService.getDataList('admitcard').subscribe((Data: any[]) => {
+      this.admitcards = Data;
+      this.searchset = [...this.searchset, ...this.admitcards];
+      // console.log(this.searchset);
+    });
+    setTimeout(() => {
+      console.log(this.searchset);
+      // console.log(this.searchset.find(item => item.title === '2023'));
+    }, 2000);
+
+  }
+  
   handleMediaQueryChange(mediaQuery: MediaQueryListEvent | MediaQueryList): void {
     if ((mediaQuery as MediaQueryListEvent).matches) {
       // Media query matches, handle accordingly
