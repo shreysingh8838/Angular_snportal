@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CallProductDataService } from '../call-product-data.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-product',
@@ -113,7 +114,7 @@ import { CallProductDataService } from '../call-product-data.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit{
-  constructor(private route : ActivatedRoute, private callProductData : CallProductDataService){}
+  constructor(private route : ActivatedRoute, private callProductData : CallProductDataService, private titleService : Title){}
 
   isLoading: boolean = true; // Flag to track loading state
 
@@ -174,6 +175,8 @@ export class ProductComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Contact Us | Milegi Sarkari Naukri');
+
     this.link = this.route.snapshot.queryParams['link'];
     // console.log("prod component hit");
     this.HitClick(this.link);

@@ -175,7 +175,7 @@ export class HomeComponent implements OnInit {
     this.titleService.setTitle('Home | Milegi Sarkari Naukri');
 
     this.callHomeDataService.getHomeDataList().subscribe((homeData: any[]) => {
-      console.log("v22");
+      console.log("v23");
       // console.log(homeData);
       this.resultSet = homeData[0];
       this.admitCardSet = homeData[1];
