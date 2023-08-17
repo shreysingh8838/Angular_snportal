@@ -1,5 +1,9 @@
 # Sarkariresult
 
+### For each and every branch
+1. Do not change the docker file, docker-compose, nginx-conf or milegisarkarinaukri.online.conf file.
+2. It will only be changed when the branch is merged into the master.
+ 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
 ## Development server
